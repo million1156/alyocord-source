@@ -3,7 +3,7 @@ var chatting = false;
 var limit = 50;
 
 function ping() {
-  sound = new Audio("//alyocord.funwithalbi.xyz/cdn-1/ping.mp3");
+  sound = new Audio("//alyocord.com/cdn-1/ping.mp3");
   sound.play();
 }
 
@@ -84,7 +84,7 @@ function chat() {
     messagesSent++;
   }
   if (messagesSent >= 50) {
-    window.location.href = "//alyocord.funwithalbi.xyz/api/api.php?do=yes";
+    window.location.href = "//alyocord.com/api/api.php?do=yes";
   } else if (messagesSent > 5) {
     alert("You are being ratelimited");
   } else {

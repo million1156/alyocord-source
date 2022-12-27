@@ -3,12 +3,12 @@ session_start();
 
 if (!isset($_SESSION['loggedin'])) {
   session_destroy();
-  echo "<script>window.location.href = \"//alyocord.funwithalbi.xyz/login/\"</script>";
+  echo "<script>window.location.href = \"//alyocord.com/login/\"</script>";
 }
 
 if (isset($_POST['logout'])) {
   session_destroy();
-  echo "<script>window.location.href = \"//alyocord.funwithalbi.xyz/login/\"</script>";
+  echo "<script>window.location.href = \"//alyocord.com/login/\"</script>";
 } 
 
 $db = new PDO('sqlite:../database.sqlite');
@@ -22,15 +22,15 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/style.css?version=<?php echo time(); ?>">
-  <link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
-  <script src='//alyocord.funwithalbi.xyz/jquery-3.6.1.js'></script>
-  <script src='//alyocord.funwithalbi.xyz/chat/script.js?version=<?php echo time(); ?>'></script>
+  <link rel="stylesheet" href="//alyocord.com/chat/style.css?version=<?php echo time(); ?>">
+  <link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
+  <script src='//alyocord.com/jquery-3.6.1.js'></script>
+  <script src='//alyocord.com/chat/script.js?version=<?php echo time(); ?>'></script>
   <title>Alyocord</title>
 </head>
 <body>
 
-  <div id='alert' style='display:none;'><nav style='background:#0f0645;'><center><button style='border-style:solid;border-color:white;background:none;border-radius:5%;color:white;' onclick='window.location.href = "//alyocord.funwithalbi.xyz/chat/turbo/claim/";'>Claim Turbo </button>&nbsp &nbsp &nbsp<button onclick='$("#alert").empty();' style='background:none;border:none;color:red;'>X</button></center></nav></div>
+  <div id='alert' style='display:none;'><nav style='background:#0f0645;'><center><button style='border-style:solid;border-color:white;background:none;border-radius:5%;color:white;' onclick='window.location.href = "//alyocord.com/chat/turbo/claim/";'>Claim Turbo </button>&nbsp &nbsp &nbsp<button onclick='$("#alert").empty();' style='background:none;border:none;color:red;'>X</button></center></nav></div>
 
   <div class='dms'>
     
@@ -68,7 +68,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
       if ($_SESSION['user']['userid'] == null) {
         session_destroy();
-        echo "<script>window.location.href = '//alyocord.funwithalbi.xyz/login/';</script>";
+        echo "<script>window.location.href = '//alyocord.com/login/';</script>";
       }
     }
 
@@ -108,7 +108,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               try {
                 if ($_SESSION['user']['userid'] == null) {
                   session_destroy();
-                  echo "<script>window.location.href = '//alyocord.funwithalbi.xyz/login/';</script>";
+                  echo "<script>window.location.href = '//alyocord.com/login/';</script>";
                 }
                 
                 $stmt = $db->prepare("INSERT INTO messages (userid, content, room, time) VALUES(:userid, :content, :room, :time)");
@@ -134,7 +134,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               try {
                 if ($_SESSION['user']['userid'] == null) {
                   session_destroy();
-                  echo "<script>window.location.href = '//alyocord.funwithalbi.xyz/login/';</script>";
+                  echo "<script>window.location.href = '//alyocord.com/login/';</script>";
                 }
                 
                 $stmt = $db->prepare("INSERT INTO messages (userid, content, room, time) VALUES(:userid, :content, :room, :time)");
@@ -188,8 +188,8 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   <button style='background:transparent;border:none;' onclick='theme()' id='theme-trigger'><img src='//cdn1.iconfinder.com/data/icons/user-interface-16x16-vol-1/16/contrast-circle-512.png' height='20' width='20'></button>
 
-  <button style='background:transparent;border:none;' onclick="location.href = '//alyocord.funwithalbi.xyz/chat/settings/';"><img src='//media.discordapp.net/attachments/1027560810962235392/1029375797825380362/unknown.png' height='25' width='25' id='settings'></button>
+  <button style='background:transparent;border:none;' onclick="location.href = '//alyocord.com/chat/settings/';"><img src='//media.discordapp.net/attachments/1027560810962235392/1029375797825380362/unknown.png' height='25' width='25' id='settings'></button>
 
-  <button style='background:transparent;border:none;' onclick="location.href = '//alyocord.funwithalbi.xyz/chat/turbo/';"><img src='//media.discordapp.net/attachments/1028244276590686218/1030940228514480228/turbo.png' height='25' width='25' id='turbo-man'></button>
+  <button style='background:transparent;border:none;' onclick="location.href = '//alyocord.com/chat/turbo/';"><img src='//media.discordapp.net/attachments/1028244276590686218/1030940228514480228/turbo.png' height='25' width='25' id='turbo-man'></button>
 </body>
 </html>

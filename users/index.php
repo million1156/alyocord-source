@@ -8,12 +8,12 @@ if (!(isset($_SESSION['admin']))) {
 ?>
 
 <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<link rel="stylesheet" href="//alyocord.funwithalbi.xyz/style.css?version=<?php echo time(); ?>">
-<script src='//alyocord.funwithalbi.xyz/script.js?version=<?php echo time(); ?>'></script>
-<link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
+<link rel="stylesheet" href="//alyocord.com/style.css?version=<?php echo time(); ?>">
+<script src='//alyocord.com/script.js?version=<?php echo time(); ?>'></script>
+<link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
 <center>
   <br>
-  <button class='button' onclick='window.location.href = "//alyocord.funwithalbi.xyz/";'>Home</button> <br> <br>
+  <button class='button' onclick='window.location.href = "//alyocord.com/";'>Home</button> <br> <br>
 </center>
 <?php
   try {

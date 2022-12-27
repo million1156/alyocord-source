@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['admin']))
 {
-  header("Location: //alyocord.funwithalbi.xyz/");
+  header("Location: //alyocord.com/");
 }
 
 $db = new PDO('sqlite:../../../database.sqlite');
@@ -17,10 +17,10 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <script src='https://alyocord.funwithalbi.xyz/jquery-3.6.1.js'></script>
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/style.css?version=<?php echo time(); ?>">
-  <script src='//alyocord.funwithalbi.xyz/chat/script.js?version=<?php echo time(); ?>'></script>
-  <link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
+  <script src='https://alyocord.com/jquery-3.6.1.js'></script>
+  <link rel="stylesheet" href="//alyocord.com/chat/style.css?version=<?php echo time(); ?>">
+  <script src='//alyocord.com/chat/script.js?version=<?php echo time(); ?>'></script>
+  <link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
   <title>Make Turbo Gifts</title>
 </head>
 <body>
@@ -63,12 +63,12 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       }
 
       $code = makeCode();
-      $link = "https://alyocord.funwithalbi.xyz/chat/turbo/gift?code=$code";
+      $link = "https://alyocord.com/chat/turbo/gift?code=$code";
 
       for ($k = 0 ; $k < intval($_POST['quantity']); $k++)
       {
         $code = makeCode();
-        $link = "https://alyocord.funwithalbi.xyz/chat/turbo/gift?code=$code";
+        $link = "https://alyocord.com/chat/turbo/gift?code=$code";
         
         $qr = $db->prepare("INSERT INTO gifts (made, code, claimed, type, months, by) VALUES (:made, :code, 0, :type, :months, :by)");
         $qr->bindValue(":type", $_POST['type']);

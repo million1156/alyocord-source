@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['loggedin'])) {
-  header("Location: //alyocord.funwithalbi.xyz/login/");
+  header("Location: //alyocord.com/login/");
 }  // what is it (the idea)
   // actually nvm i have a better idea
   // hi, im trying to get the download link for the db for aimee
@@ -15,14 +15,14 @@ if (!isset($_SESSION['loggedin'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/style.css?version=<?php echo time(); ?>">
-  <script src='//alyocord.funwithalbi.xyz/chat/script.js?version=<?php echo time(); ?>'></script>
-  <link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
+  <link rel="stylesheet" href="//alyocord.com/chat/style.css?version=<?php echo time(); ?>">
+  <script src='//alyocord.com/chat/script.js?version=<?php echo time(); ?>'></script>
+  <link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
   <title>Claim Turbo | Alyocord</title>
 </head>
 <body>
   <center><br><br>
-    <button class='button' onclick='window.location.href = "//alyocord.funwithalbi.xyz/chat/";'>Chat</button> <br> <br>
+    <button class='button' onclick='window.location.href = "//alyocord.com/chat/";'>Chat</button> <br> <br>
     <button class='button' onclick='history.back();'>Back</button> <br> <br> <br> <br>
     <div id='gifts'>
       <?php
@@ -57,7 +57,7 @@ if (!isset($_SESSION['loggedin'])) {
               $uusr->execute();
               $uusr->closeCursor();
               $_SESSION['user']['turbo'] = true;
-              echo "<script>window.location.href = '//alyocord.funwithalbi.xyz/chat/turbo/claim/'</script>";
+              echo "<script>window.location.href = '//alyocord.com/chat/turbo/claim/'</script>";
             } catch (PDOException $ex) {
               echo "<br><br><p style='color:red;'>".$ex->getMessage()."</p>";
             }

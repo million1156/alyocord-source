@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['loggedin'])) {
-  header("Location: //alyocord.funwithalbi.xyz/login/");
+  header("Location: //alyocord.com/login/");
 }
 
 date_default_timezone_set("Europe/Tirane");
@@ -15,17 +15,17 @@ date_default_timezone_set("Europe/Tirane");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <script src='//alyocord.funwithalbi.xyz/jquery-3.6.1.js'></script>
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/style.css?version=<?php echo time(); ?>">
-  <script src='//alyocord.funwithalbi.xyz/chat/script.js?version=<?php echo time(); ?>'></script>
-  <link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
+  <script src='//alyocord.com/jquery-3.6.1.js'></script>
+  <link rel="stylesheet" href="//alyocord.com/chat/style.css?version=<?php echo time(); ?>">
+  <script src='//alyocord.com/chat/script.js?version=<?php echo time(); ?>'></script>
+  <link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
   <title>Alyocord Turbo</title>
 </head>
 <body>
   <center><h1 id="AlyocordTurboFont">Alyocord <span id="pink">Turbo</span></h1> 
     <br>
     <img src='//media.discordapp.net/attachments/1028244276590686218/1030940228514480228/turbo.png' height='200' width='200'> <br/><br/>
-  <button class='button' onclick='window.location.href = "//alyocord.funwithalbi.xyz/chat/";'>Chat</button> <br> <br>
+  <button class='button' onclick='window.location.href = "//alyocord.com/chat/";'>Chat</button> <br> <br>
   <button class='button' onclick='history.back();'>Back</button> <br> <br> <br>
   <?php if (!$_SESSION['user']['turbo'] == true) { ?>
   <br>

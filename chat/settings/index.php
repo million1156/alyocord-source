@@ -7,7 +7,7 @@ define('GB', 1073741824);
 define('TB', 1099511627776);
 
 if (!isset($_SESSION['loggedin'])) {
-  header("location: //alyocord.funwithalbi.xyz/login/");
+  header("location: //alyocord.com/login/");
 }
 
 $db = new PDO('sqlite:../../database.sqlite');
@@ -27,16 +27,16 @@ $tag = $row['nameid'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/style.css?version=<?php echo time(); ?>">
-  <link rel="stylesheet" href="//alyocord.funwithalbi.xyz/chat/settings/style.css?version=<?php echo time(); ?>">
-  <script src='//alyocord.funwithalbi.xyz/chat/script.js?version=<?php echo time(); ?>'></script>
-  <link rel='icon' type='image/x-icon' href='//alyocord.funwithalbi.xyz/cdn-1/favicon.ico'>
+  <link rel="stylesheet" href="//alyocord.com/chat/style.css?version=<?php echo time(); ?>">
+  <link rel="stylesheet" href="//alyocord.com/chat/settings/style.css?version=<?php echo time(); ?>">
+  <script src='//alyocord.com/chat/script.js?version=<?php echo time(); ?>'></script>
+  <link rel='icon' type='image/x-icon' href='//alyocord.com/cdn-1/favicon.ico'>
   <title>Settings</title>
 </head>
 <body>
   <center>
     <br>
-    <button class='button' onclick='location.href = "https://alyocord.funwithalbi.xyz/chat/";'>Chat</button>
+    <button class='button' onclick='location.href = "https://alyocord.com/chat/";'>Chat</button>
     <form method='post' class='newuser'>
       Set new username:
       <br><br>
@@ -86,7 +86,7 @@ $tag = $row['nameid'];
             $stmt->bindValue(":uid", $_POST['delete']);
             $stmt->execute();
             session_destroy();
-            echo "<script>window.location.href = '//alyocord.funwithalbi.xyz/login/?del=true';</script>";
+            echo "<script>window.location.href = '//alyocord.com/login/?del=true';</script>";
           }
         }
 
@@ -157,7 +157,7 @@ $tag = $row['nameid'];
               $stmt->execute();
               $stmt->closeCursor();
               $_SESSION['user']['username'] = htmlspecialchars($newUsername);
-              echo "<script>window.location.href = \"https://alyocord.funwithalbi.xyz/chat/settings/\";</script>"; 
+              echo "<script>window.location.href = \"https://alyocord.com/chat/settings/\";</script>"; 
             } else {
               echo "<br><p class='c-r'>Too many users have this username!</p>";
             }
@@ -297,7 +297,7 @@ $tag = $row['nameid'];
         }
         
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-          echo "<br><p class='c-r'>Sorry, only JPG, JPEG & PNG files are allowed. You can upload gif with <a href='//alyocord.funwithalbi.xyz/chat/turbo'>Turbo</a></p>";
+          echo "<br><p class='c-r'>Sorry, only JPG, JPEG & PNG files are allowed. You can upload gif with <a href='//alyocord.com/chat/turbo'>Turbo</a></p>";
           $uploadOk = 0;
         }
         
