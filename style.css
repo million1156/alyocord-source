@@ -1,0 +1,231 @@
+body {
+  background: #202221;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(54,53,53,1) 100%);
+  color: white;
+} 
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: #303130;
+  border: none;
+  color: white;
+  padding: 13px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  box-shadow: 5px 10px #888888;
+  transition: background .2s ease-in;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+.button:hover {
+  background-color: #1c1c1c;
+}
+
+input, select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  display: inline-block;
+  background-color: #0158f9;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2e77ff;
+}
+
+.signup {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.c-g {
+  color: green;
+}
+
+.c-r {
+  color: red;
+}
+
+.message-content {
+  position: fixed;
+  width: 90%;
+  bottom: 8px;
+  left: 4px;
+}
+
+.send-message {
+  position: fixed;
+  width: 9%;
+  bottom: 20px;
+  right: 5px;
+  border-radius: 100px;
+  transition: background .2s ease-in;
+}
+
+.send-message:hover {
+  background-color: #1c1c1c;
+}
+
+.gc-text {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+#messages {
+  position: fixed;
+  left: 15px;
+  top: 1cm;
+  overflow: scroll;
+  height: 88%;
+  width: 99%;
+}
+
+#logout {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  transition: background .2s ease-in;
+}
+
+#settings {
+  position: fixed;
+  top: 15px;
+  right: 80px;
+  transition: 0.2s all;
+}
+
+#theme-trigger {
+  position: fixed;
+  top: 15px;
+  right: 130px;
+  transition: 0.2s all;
+}
+
+#turbo-man {
+  position: fixed;
+  top: 15px;
+  right: 180px;
+  transition: 0.2s all;
+}
+
+.light-mode {
+  background: rgb(255,255,255);
+  color: black;
+}
+
+.pfp {
+  border-radius: 50%
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#pink {
+ color: pink; 
+}
+
+#AlyocordTurboFont {
+  font-family: Sans-Serif;
+}
+
+.delm {
+  display: none;
+}
+
+.msg:hover .delm {
+  display: inline;
+}
+
+.msg {
+  border: transparent;
+}
+
+.light-mode {
+  background: #fff;
+  color: #000;
+}
+
+.light-mode .message-content {
+  background: #d9d9d9;
+  color: #000;
+}
+
+.light-mode .button {
+  background-color: #cccccc;
+  border: none;
+  color: #000;
+  padding: 13px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  box-shadow: 5px 10px #a8a8a8;
+  transition: background .2s ease-in;
+  cursor: pointer;
+}
+
+.light-mode .msg:hover {
+  background: #bfbfbf;
+}

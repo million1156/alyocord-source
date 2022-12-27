@@ -1,0 +1,32 @@
+.newuser {
+  position: fixed;
+  left: 40px;
+}
+
+.biochange {
+  position: fixed;
+  right: 40px;
+}
+
+.newpass {
+  position: fixed;
+  left: 40px;
+  top: 5.5cm;
+}
+
+.newmail {
+  position: fixed;
+  left: 40px;
+  top: 9.5cm;
+}
+
+.newpfp {
+  position: fixed;
+  left: 40px;
+  top: 13.5cm;
+}
+
+.tag:disabled {
+  background: #000;
+  cursor: not-allowed;
+}
