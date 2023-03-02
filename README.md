@@ -1,4 +1,4 @@
-# alyocord
+# alyocord, a clone of discord.
 Alyocord Project
 
 clone or download as zip; free and OSS using MIT license 
@@ -12,4 +12,4 @@ Push any updates to the [master branch](https://github.com/alyocord/alyocord/tre
 
 
 # Support
-For support on the repository itself please contact the maintainer. Plus, you're smart enough to be a developer, so I hope you at least know how GitHub works
+For support on the repository itself please contact the maintainer.
